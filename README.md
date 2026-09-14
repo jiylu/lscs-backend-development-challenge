@@ -1,6 +1,6 @@
 # Macky Merch API
 
-Backend REST API for Macky Merch, built with Express.js, TypeScript, PostgreSQL, and Prisma ORM. Follows the official La Salle Computer Society (LSCS) Backend Standards.
+Backend REST API for Macky Merch, built with Express.js, TypeScript, PostgreSQL, and Prisma ORM.
 
 ---
 
@@ -12,7 +12,7 @@ Backend REST API for Macky Merch, built with Express.js, TypeScript, PostgreSQL,
 
 ### Step 1: Clone and Install Dependencies
 ```bash
-git clone <repository-url>
+git clone https://github.com/jiylu/lscs-backend-development-challenge
 cd macky-merch-api
 npm install
 ```
