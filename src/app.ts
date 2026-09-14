@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import productsRouter from './products/products.controller.js';
+import productsRouter from './products/routes/products.routes.js';
 
 const app = express();
 app.use(express.json());
