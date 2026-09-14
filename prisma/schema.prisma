@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Product {
+  id            String     @id @default(uuid())
+  name          String    
+  price         Float     
+  stock         Int
+  category      String
+  description   String
+  img_url       String
+  is_featured   Boolean
+  quantity_sold Int        @default(0)
+  created_at    DateTime   @default(now())
+  updated_at    DateTime   @updatedAt
+  is_deleted    Boolean    @default(false)
+}
