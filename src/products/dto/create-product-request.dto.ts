@@ -8,7 +8,7 @@ export const CreateProductSchema = z.object({
     .positive('Price must be positive'),
   stock: z.number()
     .int()
-    .min(0, 'Stock must be a positive.'),
+    .min(0, 'Stock must be positive.'),
   category: z.string()
     .min(1, 'Category is required.')
     .max(100, 'Category must not exceed 100 characters.'),
