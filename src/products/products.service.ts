@@ -17,12 +17,18 @@ export const findAll = async (page: number, limit: number) => {
 
   const [products, total] = await Promise.all([
     prisma.product.findMany({
+      where: {
+        is_deleted: false,
+      },
       skip,
       take: limit,
     }),
-    prisma.product.count(),
+    prisma.product.count({
+      where: {
+        is_deleted: false,
+      },
+    }),
   ]);
-
   console.log(`Found ${products.length} products.`);
   return {
     data: products,
